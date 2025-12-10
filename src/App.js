@@ -9,32 +9,41 @@ function App() {
   const [msg, setMsg] = useState("");
 
   async function handleLogin() {
-    try {
-      // Changed endpoint to /login to match the UI. 
-      // If you are still using /register, change this back.
-      const res = await fetch("http://127.0.0.1:8000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      });
+  try {
+    const res = await fetch("http://127.0.0.1:8000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
 
-      const data = await res.json();
-      console.log(data);
-      if (res.ok) {
-        setMsg("Login successful");
-      } else {
-        setMsg(data.detail || "Login failed");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setMsg("An error occurred");
+    const data = await res.json();
+    console.log("Login response:", data);
+
+    if (!res.ok) {
+      // Backend sent an error (401, 400, etc.)
+      setMsg(data.detail || "Login failed");
+      return;
     }
+
+    // ✅ STORE JWT TOKEN SAFELY
+    localStorage.setItem("token", data.access_token);
+
+    setMsg("Login successful");
+
+    // ✅ OPTIONAL: redirect to dashboard later
+    // window.location.href = "/dashboard";
+
+  } catch (error) {
+    console.error("Network error:", error);
+    setMsg("Backend not reachable");
   }
+}
+
 
   const GoogleIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
