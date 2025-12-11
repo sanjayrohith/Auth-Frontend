@@ -1,71 +1,99 @@
-![App Preview](public/screenshot.jpeg)
-# Getting Started with Create React App
+# Auth Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="public/screenshot.jpeg" alt="App Screenshot" width="600" />
+  
+  <p align="center">
+    A modern, responsive authentication interface built with React.
+    <br />
+    <a href="#getting-started"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="#features">View Demo</a>
+    ·
+    <a href="#issues">Report Bug</a>
+    ·
+    <a href="#issues">Request Feature</a>
+  </p>
+</div>
 
-## Available Scripts
+## 📋 About The Project
 
-In the project directory, you can run:
+This project is a sleek, modern frontend for an authentication system. It provides a user-friendly interface for logging in, featuring social authentication options and a clean design. It is designed to connect seamlessly with a backend API (e.g., FastAPI).
 
-### `npm start`
+### ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Modern UI/UX**: Clean, card-based layout with a subtle grid background.
+*   **Responsive Design**: Fully responsive and mobile-friendly.
+*   **Social Login UI**: Buttons for Google and GitHub authentication.
+*   **Secure Input**: Password field with show/hide functionality.
+*   **Interactive Elements**: Hover states and focus effects for better user experience.
+*   **Iconography**: Uses `lucide-react` for consistent and beautiful icons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Built With
 
-### `npm test`
+*   [![React][React.js]][React-url]
+*   [![CSS3][CSS3]][CSS3-url]
+*   **Lucide React** - For icons.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+To get a local copy up and running, follow these simple steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*   npm
+    ```sh
+    npm install npm@latest -g
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/sanjayrohith/Auth-Frontend.git
+    ```
+2.  Navigate to the project directory
+    ```sh
+    cd Auth-Frontend
+    ```
+3.  Install NPM packages
+    ```sh
+    npm install
+    ```
+4.  Start the development server
+    ```sh
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔌 Backend Integration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This frontend is configured to send `POST` requests to `http://127.0.0.1:8000/login`. Ensure your backend server is running and accessible at this endpoint.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The payload structure for login is:
+```json
+{
+  "email": "user@example.com",
+  "password": "yourpassword"
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🤝 Contributing
 
-## Learn More
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 License
 
-### Code Splitting
+Distributed under the MIT License. See `LICENSE` for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- MARKDOWN LINKS & IMAGES -->
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[CSS3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
