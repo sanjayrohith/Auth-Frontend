@@ -134,10 +134,6 @@ function App() {
         <div className="auth-section">
           <div className="card">
             <div className="card-header">
-              <div className="welcome-badge">
-                <Sparkles size={14} />
-                <span>Welcome back</span>
-              </div>
               <h2 className="title">Sign in to your account</h2>
               <p className="subtitle">Enter your credentials to continue your journey</p>
             </div>
